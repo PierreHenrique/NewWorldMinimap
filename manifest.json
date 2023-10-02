@@ -1,0 +1,209 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "NWMM - New World MiniMap",
+    "version": "0.2.21",
+    "minimum-overwolf-version": "0.120.0",
+    "author": "New World MiniMap",
+    "icon": "IconMouseOver.png",
+    "icon_gray": "IconMouseNormal.png",
+    "launcher_icon": "desktop-icon.ico",
+    "description": "A Mini Map Addon for the game New World"
+  },
+  "permissions": [
+    "Hotkeys", "Extensions", "Streaming", "Profile", "GameInfo", "DesktopStreaming"
+  ],
+  "data": {
+    "protocol_override_domains" : {"googlesyndication" : "http"},
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [21816]
+    },
+    "launch_events": [
+      {
+        "event": "GameLaunch",
+        "event_data": {
+          "game_ids": [21816]
+        },
+        "start_minimized": true
+      }
+    ],
+    "hotkeys": {
+      "nwmm_showhide": {
+        "title": "Toggle Mini Map",
+        "action-type": "custom",
+        "default": "Alt+M"
+      },
+      "nwmm_zoom_in": {
+        "title": "Zoom In",
+        "action-type": "custom",
+        "default": "Alt+I"
+      },
+      "nwmm_zoom_out": {
+        "title": "Zoom Out",
+        "action-type": "custom",
+        "default": "Alt+O"
+      },
+      "nwmm_showhide2": {
+        "title": "Toggle Large Map",
+        "action-type": "custom",
+        "default": "Alt+N"
+      },
+      "nwmm_locationstream": {
+        "title": "Location Streaming",
+        "action-type": "custom",
+        "default": "Alt+B"
+      }
+    },
+    "game_events": [21816],
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "index.html",
+        "native_window": true,
+        "desktop_only": true,
+        "background_optimization": false,
+        "is_background_page": true,
+        "transparent": true,
+        "resizable": false,
+        "show_in_taskbar": false,
+        "size": {
+          "width": 100,
+          "height": 100
+        },
+        "grab_keyboard_focus": false
+      },
+      "settings": {
+        "file": "index.html",
+        "in_game_only": true,
+        "transparent": true,
+        "resizable": true,
+        "block_top_window_navigation":true,
+        "popup_blocker":true,
+        "mute":true,
+        "ignore_keyboard_events": false,
+        "size": {
+          "width": 600,
+          "height": 750
+        },
+        "min_size": {
+          "width": 500,
+          "height": 300
+        }
+      },
+      "ingame": {
+        "file": "index.html",
+        "in_game_only": true,
+        "transparent": true,
+        "resizable": true,
+        "block_top_window_navigation":true,
+        "popup_blocker":true,
+        "mute":true,
+        "ignore_keyboard_events": true,
+        "size": {
+          "width": 250,
+          "height": 250
+        },
+        "min_size": {
+          "width": 100,
+          "height": 100
+        },
+        "max_size": {
+          "width": 1000,
+          "height": 1000
+        },
+        "start_position": {
+          "top": 10,
+          "left": 10
+        }
+      },
+      "desktop": {
+        "file": "index.html",
+        "native_window": true,
+        "desktop_only": true,
+        "resizable": true,
+        "block_top_window_navigation":true,
+        "popup_blocker":true,
+        "mute":true,
+        "disable_hardware_acceleration": true,
+        "size": {
+          "width": 600,
+          "height": 600
+          }
+        },
+        "notification": {
+          "file": "index.html",
+          "native_window": true,
+          "desktop_only": true,
+          "resizable": true,
+          "block_top_window_navigation":true,
+          "popup_blocker":true,
+          "mute":true,
+          "disable_hardware_acceleration": true,
+          "size": {
+            "width": 600,
+            "height": 300
+            }
+          },
+      "second_screen": {
+        "file": "index.html",
+        "native_window": true,
+        "desktop_only": true,
+        "resizable": true,
+        "block_top_window_navigation":true,
+        "popup_blocker":true,
+        "mute":true,
+        "disable_hardware_acceleration": true,
+        "keep_window_location": true,
+        "size": {
+          "width": 1200,
+          "height": 700
+          },
+          "min_size": {
+            "width": 900,
+            "height": 600
+          }
+        },
+      "ingame_full": {
+        "file": "index.html",
+        "in_game_only": true,
+        "transparent": true,
+        "resizable": true,
+        "block_top_window_navigation":true,
+        "popup_blocker":true,
+        "mute":true,
+        "disable_hardware_acceleration": true,
+        "ignore_keyboard_events": false,
+        "size": {
+          "width": 1200,
+          "height": 700
+          },
+          "min_size": {
+            "width": 900,
+            "height": 600
+          }
+        }
+    },
+    "externally_connectable": {
+      "matches": [
+        "http://*.overwolf.com",
+        "https://*.overwolf.com",
+        "https://*.google-analytics.com",
+        "http://*.google-analytics.com",
+        "https://www.googleapis.com",
+        "https://cdn.newworldminimap.com"
+      ]
+    },
+    "extra-objects": {
+      "newworldminimap-plugin": {
+        "file": "plugin/NewWorldMinimapPlugin.dll",
+        "class": "NewWorldMinimapPlugin.Plugin"
+      },
+      "screenshot-plugin": {
+        "file": "ScreenshotPlugin.dll",
+        "class": "OwUtils.OwUtilsPlugin"
+      }
+    }
+  }
+}
