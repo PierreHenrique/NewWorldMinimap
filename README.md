@@ -2,6 +2,8 @@
 
 With all markers working ignoring the ToS
 
+## You need to bypass Overwolf to import the project
+
 ## How To Use
 
 - Enable developer tools in [overwolf]
