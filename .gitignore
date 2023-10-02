@@ -5,3 +5,5 @@
 /logs/*
 !/logs/README.md
 .phpunit.result.cache
+Overwolf.Extensions.dll
+Overwolf.Extensions Old.dll

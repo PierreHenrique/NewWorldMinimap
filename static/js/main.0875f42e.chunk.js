@@ -1549,7 +1549,7 @@
                                 }), e = !0), !1 === e) {
                                 var a = [];
                                 y.props.Nodes.forEach((function(e) {
-                                    "town" == e.value && e.children.forEach((function(e) {
+                                    e.children.forEach((function(e) {
                                         "children" in e ? e.children.forEach((function(e) {
                                             a.push(e.value)
                                         })) : a.push(e.value)
@@ -1576,9 +1576,9 @@
                             return this.props.Nodes.forEach((function(t) {
                                 var y = 0,
                                     n = 0;
-                                if (!["chests", "documents", "woods"].includes(t.value)) {
-                                    var u = !0;
-                                    if ("town" == t.value && (u = !1), "events" == t.value) return;
+                                if (!["yamero"].includes(t.value)) {
+                                    var u = false;
+                                    if ("events" == t.value) return;
                                     t.children.forEach((function(a) {
                                         "children" in a ? a.children.forEach((function(a) {
                                             n += 1, e.state.enabled.includes(a.value) ? (y += 1, a.enabled = !0) : a.enabled = !1, a.disabled = u
@@ -1608,13 +1608,7 @@
                                                 fontSize: "18px",
                                                 marginRight: "5px"
                                             }
-                                        }), "Filters have been disabled to comply with Amazon ToS. Stream to a ", Object(ae.jsx)("span", {
-                                            className: "settingsHotkey",
-                                            onClick: function() {
-                                                T.openBrowser()
-                                            },
-                                            children: "browser"
-                                        }), " instead"]
+                                        }), "🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈"]
                                     })]
                                 }), a]
                             })
@@ -3700,14 +3694,7 @@
                                 y.removeAd(e)
                             }), 2e3)
                         }, y.createAd = function(e) {
-                            console.log("creating ad"), !0 !== y.props.supporter.status && ("undefined" !== typeof OwAd ? "undefined" === typeof window.owAdReference ? (y.owAd = new OwAd(document.getElementById(y.props.ad_name), {
-                                size: {
-                                    width: 400,
-                                    height: 300
-                                }
-                            }), window.owAdReference = y.owAd) : (y.owAd = window.owAdReference, y.refreshAd()) : (e += 1) < 20 ? setTimeout((function() {
-                                y.createAd(e)
-                            }), 1e3) : console.log("20 reattempts, couldn't load add"))
+                            console.log("creating ad")
                         }, y.openSupporterURL = function() {
                             overwolf.utils.openStore({
                                 page: overwolf.utils.enums.eStorePage.SubscriptionPage
@@ -3747,7 +3734,7 @@
                         value: function() {
                             var e = Object(ae.jsx)("div", {
                                 className: "ad_message_nwmm",
-                                children: "Ads help support development and pay for server costs"
+                                children: "🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈 🦈"
                             });
                             return !0 === this.props.supporter_status && (e = Object(ae.jsx)("div", {
                                 className: "ad_message_nwmm",

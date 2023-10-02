@@ -3,13 +3,13 @@
   "type": "WebApp",
   "meta": {
     "name": "NWMM - New World MiniMap",
-    "version": "0.2.21",
+    "version": "69.2.21",
     "minimum-overwolf-version": "0.120.0",
     "author": "New World MiniMap",
     "icon": "IconMouseOver.png",
     "icon_gray": "IconMouseNormal.png",
     "launcher_icon": "desktop-icon.ico",
-    "description": "A Mini Map Addon for the game New World"
+    "description": "A Mini Map Addon for (who doesn't care about Tos) the game New World"
   },
   "permissions": [
     "Hotkeys", "Extensions", "Streaming", "Profile", "GameInfo", "DesktopStreaming"
